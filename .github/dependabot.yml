@@ -1,0 +1,24 @@
+# Dependabot: grouped weekly updates. This repo has no CI matrix to burn,
+# so keeping dependencies and base images current is nearly free.
+version: 2
+updates:
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      pip:
+        patterns:
+          - '*'
+    open-pull-requests-limit: 2
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      github_actions:
+        patterns:
+          - '*'
+    open-pull-requests-limit: 2
